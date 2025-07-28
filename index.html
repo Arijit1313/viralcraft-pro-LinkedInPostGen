@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViralCraft Pro - LinkedIn Post Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ViralCraft Pro – LinkedIn Post Generator</h1>
+            <p class="header-subtitle">Generate viral-optimized LinkedIn posts that engage your audience</p>
+        </header>
+
+        <main class="main-content">
+            <form id="postForm" class="form-section">
+                <div class="form-group">
+                    <label for="topic" class="form-label">Topic / Main Idea *</label>
+                    <input type="text" id="topic" name="topic" class="form-control" placeholder="e.g., AI automation workflows" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="audience" class="form-label">Target Audience *</label>
+                    <select id="audience" name="audience" class="form-control" required>
+                        <option value="">Select your target audience</option>
+                        <option value="Tech Professionals">Tech Professionals</option>
+                        <option value="Entrepreneurs">Entrepreneurs</option>
+                        <option value="Marketers">Marketers</option>
+                        <option value="General Business">General Business</option>
+                        <option value="Students">Students</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tone" class="form-label">Tone *</label>
+                    <select id="tone" name="tone" class="form-control" required>
+                        <option value="">Select tone</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Casual & Friendly">Casual & Friendly</option>
+                        <option value="Bold & Controversial">Bold & Controversial</option>
+                        <option value="Inspiring">Inspiring</option>
+                        <option value="Educational">Educational</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="personalStory" class="form-label">Personal Story / Context (Optional)</label>
+                    <textarea id="personalStory" name="personalStory" class="form-control" rows="3" placeholder="Share a personal experience or context that relates to your topic..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="metrics" class="form-label">Specific Metrics / Results (Optional)</label>
+                    <textarea id="metrics" name="metrics" class="form-control" rows="2" placeholder="e.g., Increased productivity by 40%, saved 10 hours per week..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contentType" class="form-label">Content Type *</label>
+                    <select id="contentType" name="contentType" class="form-control" required>
+                        <option value="">Select content type</option>
+                        <option value="Personal Story">Personal Story</option>
+                        <option value="Framework/List">Framework/List</option>
+                        <option value="Tool Review">Tool Review</option>
+                        <option value="Contrarian Take">Contrarian Take</option>
+                        <option value="Behind-the-Scenes">Behind-the-Scenes</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="generateBtn" class="btn btn--primary btn--full-width">Generate Post</button>
+            </form>
+
+            <div id="results" class="results-section hidden">
+                <div class="strategy-overview">
+                    <h3>Strategy Overview</h3>
+                    <div class="strategy-details">
+                        <div class="strategy-item">
+                            <span class="strategy-label">Content Type:</span>
+                            <span id="strategyContentType"></span>
+                        </div>
+                        <div class="strategy-item">
+                            <span class="strategy-label">Psychological Triggers:</span>
+                            <span id="strategyTriggers"></span>
+                        </div>
+                        <div class="strategy-item">
+                            <span class="strategy-label">Predicted Engagement Score:</span>
+                            <span id="engagementScore" class="score"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="generated-post">
+                    <h3>Generated LinkedIn Post</h3>
+                    <pre id="postContent" class="post-content"></pre>
+                    <button type="button" id="copyBtn" class="btn btn--secondary btn--sm">Copy Post</button>
+                </div>
+
+                <div class="alternative-hooks">
+                    <button type="button" id="hooksToggle" class="btn btn--outline">Show Alternative Hooks</button>
+                    <div id="hooksContent" class="hooks-content hidden">
+                        <h4>Alternative Hook Options</h4>
+                        <div id="hooksList"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Built with ViralCraft Pro framework</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
